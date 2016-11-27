@@ -6,9 +6,5 @@ def subsets(array)
   prev_subsets.each do |subset|
     result << subset.dup.push(array.last)
   end
-
   result
-
-
-
 end
