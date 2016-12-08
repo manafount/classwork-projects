@@ -1,0 +1,14 @@
+<% is_owner = current_user && @cat.user_id == current_user.id %>
+<tr>
+  <td><%= req.requester.username %></td>
+  <td><%= req.start_date %></td>
+  <td><%= req.end_date %></td>
+  <td>
+    <% if req.pending? && is_owner %>
+        <%= button_to "Approve", approve_cat_rental_request_url(req) %>
+        <%= button_to "Deny", deny_cat_rental_request_url(req) %>
+    <% else %>
+      <%= req.status %>
+    <% end %>
+  </td>
+</tr>
