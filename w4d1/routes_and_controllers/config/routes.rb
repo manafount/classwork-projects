@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # resource :users
@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   # patch 'users/' => 'users#update'
   # delete 'users/' => 'users#destroy'
   # post 'users/' => 'users#create'
+  resources :users, :only => [:create, :destroy, :index, :show, :update] do
+      resources :contacts, :only => [:index]
+  end
 
   resource :contact_shares
 end
