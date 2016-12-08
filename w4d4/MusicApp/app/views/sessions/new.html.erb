@@ -13,11 +13,17 @@
         type="hidden"
         name="authenticity_token"
         value="<%= form_authenticity_token %>">
-        <label for="email">Email</label><br>
-        <input id="email" type="text" name="user[email]"><br>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="email" type="email" name="user[email]" class="validate"><br>
+          <label for="email">Email</label><br>
+        </div>
 
-        <label for="password">Password</label><br>
-        <input id="password" type="password" name="user[password]"><br>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">lock_outline</i>
+          <input id="password" type="password" name="user[password]" class="validate"><br>
+          <label for="password">Password</label><br>
+        </div>
 
         <button class="btn waves-effect waves-light center" type="submit" name="action">Submit
           <i class="material-icons right">send</i>

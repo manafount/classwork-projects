@@ -11,8 +11,8 @@
 #
 
 class Album < ApplicationRecord
-  validates :name, :band_id, presence: true
+  validates :name, :band_id, :genre, presence: true
 
-  has_many :tracks
+  has_many :tracks, dependent: :destroy
   belongs_to :band
 end
