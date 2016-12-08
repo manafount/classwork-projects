@@ -12,10 +12,10 @@
   <body>
     <nav>
       <div class="nav-wrapper orange accent-3">
-        <a href="#" class="brand-logo">MusicApp</a>
+        <a href="/bands" class="brand-logo">MusicApp</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">One</a></li>
-          <li><a href="badges.html">Two</a></li>
+          <li><a href="sass.html">Kittens</a></li>
+          <li><a href="badges.html">About</a></li>
           <li>
             <% if current_user %>
               <%= link_to 'Log Out', session_url, method: :delete %>
@@ -23,7 +23,6 @@
               <%= link_to 'Log In', new_session_url, method: :get %>
             <% end %>
           </li>
-          <!-- <li><a href="collapsible.html">Three</a></li> -->
         </ul>
       </div>
     </nav>

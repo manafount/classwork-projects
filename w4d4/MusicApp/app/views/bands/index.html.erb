@@ -1,0 +1,20 @@
+<div class="card">
+  <h3>All Bands</h3>
+
+  <ul class="collapsible" data-collapsible="accordion">
+    <% @bands.each do |band| %>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">surround_sound</i>
+          <%= band.name %>
+        </div>
+        <div class="collapsible-body">
+          <p><%= Faker::Hipster.paragraph %></p>
+          <p><%= link_to "View Albums", band_url(band) %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+  <p><%= link_to "Add A Band", new_band_url, class: 'btn' %></p>
+</div>

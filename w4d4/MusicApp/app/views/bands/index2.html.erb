@@ -1,0 +1,13 @@
+<div class="card">
+  <h3>All Bands</h3>
+
+  <ul>
+    <div class="collection">
+      <% @bands.each do |band| %>
+        <%= link_to band.name, band_url(band), class: 'collection-item' %>
+      <% end %>
+    </div>
+  </ul>
+
+  <%= link_to "Add A Band", new_band_url, class: 'btn' %>
+</div>

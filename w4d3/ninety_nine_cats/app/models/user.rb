@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   has_many :rental_requests,
   foreign_key: :user_id,
   class_name: :CatRentalRequest
-  
+
   def reset_session_token!
     self.session_token = SecureRandom::urlsafe_base64(128)
     self.save!
