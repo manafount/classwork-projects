@@ -1,0 +1,28 @@
+<br>
+<br>
+<div class="col s12 m6">
+  <div class="card">
+    <div class="row">
+      <div class="input-field col s12 center">
+        <h4 class="center login-form-text">Please Log In</h4>
+      </div>
+    </div>
+    <div class="card-content">
+      <form action="/session" method="POST">
+        <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+        <label for="email">Email</label><br>
+        <input id="email" type="text" name="user[email]"><br>
+
+        <label for="password">Password</label><br>
+        <input id="password" type="password" name="user[password]"><br>
+
+        <button class="btn waves-effect waves-light center" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

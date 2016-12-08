@@ -4,13 +4,32 @@
     <title>MusicApp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag
-    "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+      <div class="nav-wrapper orange accent-3">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">One</a></li>
+          <li><a href="badges.html">Two</a></li>
+          <li>
+            <% if current_user %>
+              <%= link_to 'Log Out', session_url, method: :delete %>
+            <% else %>
+              <%= link_to 'Log In', new_session_url, method: :get %>
+            <% end %>
+          </li>
+          <!-- <li><a href="collapsible.html">Three</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container"
+      <%= yield %>
+    </div>
   </body>
 </html>
