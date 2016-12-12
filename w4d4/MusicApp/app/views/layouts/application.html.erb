@@ -20,7 +20,11 @@
             <% if current_user %>
               <%= link_to 'Log Out', session_url, method: :delete %>
             <% else %>
-              <%= link_to 'Log In', new_session_url, method: :get %>
+              <% if controller.class.to_s == "SessionsController" %>
+                <%= link_to 'Create Account', new_user_url, method: :get %>
+              <% else %>
+                <%= link_to 'Log In', new_session_url, method: :get %>
+              <% end %>
             <% end %>
           </li>
         </ul>
