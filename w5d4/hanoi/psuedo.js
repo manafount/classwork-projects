@@ -1,0 +1,7 @@
+/* until all disks are sorted and placed on another tower
+  ask the user for a move
+  check if the move is valid
+  make the move
+  render
+  and repeat
+*/
