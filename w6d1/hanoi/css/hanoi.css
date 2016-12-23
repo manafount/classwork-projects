@@ -1,0 +1,74 @@
+html, body, figure, figcaption, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 40pt;
+  text-align: inherit;
+}
+
+.hanoi {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  text-align: center;
+}
+
+ul {
+  margin: 30px;
+  margin-top: 200px;
+  width: 200px;
+  list-style: none;
+  border-bottom: 10px solid black;
+}
+
+li {
+  width: 0px;
+  margin: 15px;
+  height: 50px;
+  /*background-color: gray;
+  border-radius: 30px;*/
+}
+
+.selected {
+  border-color: red;
+}
+
+ul:hover {
+  border-color: blue;
+}
+
+.disk-1 {
+  width: 60px;
+}
+
+.poop-1:after {
+  height: 50px;
+  width: 80px;
+  content: url("../assets/top.jpg");
+}
+
+.disk-2 {
+  width: 120px;
+  background-repeat: no-repeat;
+}
+
+.poop-2:after {
+  height: 50px;
+  width: 120px;
+  content: url("../assets/mid.jpg");
+}
+
+.disk-3 {
+  width: 180px;
+}
+
+.poop-3:after {
+  height: 50px;
+  width: 180px;
+  content: url("../assets/bot.jpg");
+}

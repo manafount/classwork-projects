@@ -1,0 +1,53 @@
+.col h1 {
+  font-style: italic;
+}
+
+.header-link:hover {
+  text-decoration: underline;
+}
+
+.col h4 {
+  margin: 5px 0;
+}
+
+.col h5 {
+  margin: 5px 0;
+  color: $gray;
+}
+
+.bulleted-list li {
+  margin: 10px 0;
+}
+
+.bold-list li {
+  margin: 3px 0;
+  font-weight: bold;
+}
+
+.comment-link {
+  color: $blue;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.sub-section-header {
+  text-transform: uppercase;
+  color: $gray;
+}
+
+.thumbnail-pic-container {
+  width: 100%;
+  height: 150px;
+}
+
+.row input {
+  border: 1px solid $gray;  
+}
+
+.thumbnail-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
