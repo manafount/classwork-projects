@@ -1,5 +1,5 @@
 const APIUtil = {
-  toggleFollowUser: context => {
+  toggleFollowUser: (context) => {
     let meth = null;
     (context.followState === "followed") ? meth = "DELETE" : meth = "POST";
     return $.ajax({

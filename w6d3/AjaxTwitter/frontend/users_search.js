@@ -21,11 +21,9 @@ class UsersSearch {
   }
 
   renderResults(users){
-    console.log(users);
     this.$ul.empty();
     for (let i = 0; i < users.length; i++) {
       let user = users[i];
-      console.log(user.username);
       let $a = $(`<a href=\"/users/${user.id}\">${user.username}</a>`);
 
       let $follow = $("<button></button");
@@ -34,7 +32,6 @@ class UsersSearch {
       new FollowToggle($follow);
 
       let $li = $("<li></li>");
-      console.log($a);
       $li.append($a);
       $li.append($follow);
 
