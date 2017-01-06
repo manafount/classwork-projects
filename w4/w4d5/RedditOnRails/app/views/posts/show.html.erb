@@ -1,0 +1,18 @@
+<h1></h1>
+<nav>
+  <div class="nav-wrapper light-blue">
+    <div class="col s12">
+      <a href="<%= subs_url %>" class="breadcrumb">&nbspAll Subs</a>
+      <a href="<%= sub_url(@post.sub) %>" class="breadcrumb"><%= @post.sub.title %></a>
+      <a href="#" class="breadcrumb"><%= @post.title %></a>
+    </div>
+  </div>
+</nav>
+
+<h1><%= @post.title  %></h1>
+<br>
+<p><%= @post.url %></p>
+<p><%= @post.content %></p>
+
+<%= link_to 'Edit Post', edit_post_url(@post) %>
+<%= link_to 'Back to Sub', sub_url(@post.sub_id) %>

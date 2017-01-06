@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RedditOnRails</title>
+
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper light-blue accent-3">
+      <a href="/subs" class="brand-logo">RedditClone</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="<%= subs_url %>">Subs</a></li>
+        <li><a href="badges.html">About</a></li>
+        <li>
+          <% if current_user %>
+            <%= link_to 'Log Out', session_url, method: :delete %>
+          <% else %>
+            <%= link_to 'Log In', new_session_url, method: :get %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+      <div class="container"
+        <%= yield %>
+      </div>
+</body>
+</html>

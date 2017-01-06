@@ -1,0 +1,127 @@
+// Place all the styles related to the Api::Pokemon controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+.pokemon-index {
+  display: flex;
+  height: 100%;
+  padding: 0;
+}
+
+.pokemon-list {
+  overflow: scroll;
+  height: calc(100% - 20px);
+  width: 300px;
+  padding: 0 10px 0 0;
+  list-style: none;
+}
+
+.pokemon-list li {
+  padding: 5px 10px;
+  border-bottom: 1px solid $grey;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.pokemon-list li:first-of-type {
+  border-top: 1px solid $grey;
+}
+
+.pokemon-list li img {
+  width: 20px;
+  margin: 0 10px;
+}
+
+.pokemon-details {
+  background: $light-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  overflow: scroll;
+  border: 10px solid $black;
+  border-radius: 20px;
+}
+
+.pokemon-details ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.pokemon-details li {
+  font-size: 1.75em;
+  color: $black;
+}
+
+.pokemon-details h2 li {
+  font-size: 2.25em;
+}
+
+
+.pokemon-details figure {
+  border: 4px solid $black;
+  border-radius: 6px;
+  width: 80%;
+  padding: 20px;
+  max-height: 400px;
+  background: linear-gradient(315deg, $red, #ff0);
+}
+
+// $types: 'bug', 'dragon', 'electric', 'fighting', 'fire', 'flying', 'ghost',
+//         'grass', 'normal', 'poison', 'psychic', 'rock', 'steel', 'water';
+
+// @each $type in $grid {
+//   .pokemon-figure-#{$type} {
+//     background: $#{type};
+//   }
+//
+// }
+
+.pokemon-details figure img {
+  width: 100%;
+  max-height: 380px;
+}
+
+.pokemon-items {
+  border: 4px solid $black;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+
+.pokemon-items ul:first-of-type {
+  width: 100%;
+  border: 4px solid $black;
+  border-radius: 6px;
+  display: flex;
+}
+
+.pokemon-items ul li {
+  margin: 15px;
+  padding: 10px 0;
+  flex: 1;
+}
+
+.pokemon-items li img {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.pokemon-items li img:hover {
+  box-shadow: 1px 1px 5px black;
+}
+
+.pokemon-image {
+  width: 100px;
+  height: auto;
+}
+
+.pokemon-form {
+  display: flex;
+  flex-direction: column;
+}

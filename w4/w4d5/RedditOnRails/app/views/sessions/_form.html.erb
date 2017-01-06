@@ -1,0 +1,17 @@
+<h2></h2>
+<br>
+<br>
+<form action="/session" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label for="username">Username: </label>
+  <input type="text" name="session[username]" >
+
+  <label for="password">Password: </label>
+  <input type="text" name="session[password]">
+
+  <button class="btn waves-effect waves-light" type="submit" name="action">Log In
+     <i class="material-icons right">send</i>
+   </button>
+
+</form>

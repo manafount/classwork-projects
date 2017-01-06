@@ -1,0 +1,35 @@
+<h1></h1>
+<nav>
+  <div class="nav-wrapper light-blue">
+    <div class="col s12">
+      <a href="<%= subs_url %>" class="breadcrumb">&nbspAll Subs</a>
+    </div>
+  </div>
+</nav>
+
+<ul class="collapsible popout" data-collapsible="accordion">
+  <% @subs.each do |sub| %>
+    <li>
+      <div class="collapsible-header">
+        <%= link_to sub.title, sub_url(sub)%>
+      </div>
+      <div class="collapsible-body">
+        <div class="row">
+          <div class="col s12">
+           <div class="card-panel">
+             <span class="black-text">
+               <%= sub.description %>
+             </span>
+           </div>
+         </div>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<br />
+
+<a class="btn-floating btn-large waves-effect waves-light red" href="<%= new_sub_url %>">
+  <i class="material-icons">add</i>
+</a>
